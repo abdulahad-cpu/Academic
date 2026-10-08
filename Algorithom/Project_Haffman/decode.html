@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Encode and password-protect messages with Huffman coding.">
+  <title>Secure Message | Decode</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="decode">
+<header class="site-header">
+  <nav class="navbar container" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Secure Message home">
+      <span class="logo" aria-hidden="true"><span></span></span>
+      <span>Secure <strong>Message</strong></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link" href="index.html"><span class="nav-icon">↗</span> Encode</a>
+      <a class="nav-link active" href="decode.html"><span class="nav-icon">↙</span> Decode</a>
+    </div>
+  </nav>
+</header>
+<main class="container main-content">
+  <section class="hero">
+    <div class="eyebrow"><span></span> RESTORE SECURELY</div>
+    <h1>Bring your message <em>back to life.</em></h1>
+    <p>Paste a Secure Message code and enter the original password to decode it.</p>
+  </section>
+  <section class="work-card">
+    <div class="step-head"><span class="step-number">01</span><div><h2>Protected code</h2><p>Paste the complete code produced by the encoder.</p></div></div>
+    <div class="field-wrap">
+      <textarea id="encodedInput" class="large-box code-box" placeholder="Paste the protected code here..." aria-label="Protected code"></textarea>
+      <button class="corner-btn" type="button" data-copy="encodedInput" title="Copy protected code">⧉ <span>Copy</span></button>
+    </div>
+    <label class="input-label" for="decodePassword">Password <span>Use the password set during encoding</span></label>
+    <div class="password-wrap"><input id="decodePassword" type="password" minlength="8" autocomplete="current-password" placeholder="Enter your password"><button class="reveal" data-reveal="decodePassword" type="button" aria-label="Show password">◉</button></div>
+    <button class="action-btn" id="decodeButton" type="button"><span>Decode message</span><b>→</b></button>
+    <div class="status" id="decodeStatus" role="status" aria-live="polite"></div>
+    <div class="divider"></div>
+    <div class="step-head"><span class="step-number">02</span><div><h2>Original message</h2><p>Your restored message appears below.</p></div></div>
+    <div class="field-wrap output-wrap">
+      <textarea id="decodedOutput" class="large-box" placeholder="Your original message will appear here..." readonly aria-label="Original message"></textarea>
+      <button class="corner-btn" type="button" data-copy="decodedOutput" title="Copy original message">⧉ <span>Copy</span></button>
+    </div>
+  </section>
+</main>
+<footer><div class="container"><span class="green-dot"></span> Secure Message <span>•</span> Huffman coding + password protection</div></footer>
+<script src="app.js"></script>
+</body></html>
