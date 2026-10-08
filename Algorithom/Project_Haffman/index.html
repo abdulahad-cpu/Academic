@@ -1,1 +1,51 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Encode and password-protect messages with Huffman coding.">
+  <title>Secure Message | Encode</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="encode">
+<header class="site-header">
+  <nav class="navbar container" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Secure Message home">
+      <span class="logo" aria-hidden="true"><span></span></span>
+      <span>Secure <strong>Message</strong></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link active" href="index.html"><span class="nav-icon">↗</span> Encode</a>
+      <a class="nav-link" href="decode.html"><span class="nav-icon">↙</span> Decode</a>
+    </div>
+  </nav>
+</header>
+<main class="container main-content">
+  <section class="hero">
+    <div class="eyebrow"><span></span> PRIVATE BY DESIGN</div>
+    <h1>Turn your message into <em>secure code.</em></h1>
+    <p>Compress your text with Huffman coding, then protect the result with your password.</p>
+  </section>
+  <section class="work-card">
+    <div class="step-head"><span class="step-number">01</span><div><h2>Your message</h2><p>Enter the text you want to protect.</p></div></div>
+    <div class="field-wrap">
+      <textarea id="message" class="large-box" placeholder="Type your private message here..." aria-label="Message"></textarea>
+      <button class="corner-btn" type="button" data-copy="message" title="Copy message">⧉ <span>Copy</span></button>
+      <span class="counter" id="messageCount">0 characters</span>
+    </div>
+    <label class="input-label" for="encodePassword">Password <span>Minimum 8 characters</span></label>
+    <div class="password-wrap"><input id="encodePassword" type="password" minlength="8" autocomplete="new-password" placeholder="Create a password"><button class="reveal" data-reveal="encodePassword" type="button" aria-label="Show password">◉</button></div>
+    <button class="action-btn" id="encodeButton" type="button"><span>Encode message</span><b>→</b></button>
+    <div class="status" id="encodeStatus" role="status" aria-live="polite"></div>
+    <div class="divider"></div>
+    <div class="step-head"><span class="step-number">02</span><div><h2>Protected code</h2><p>Copy and keep this code for decoding later.</p></div></div>
+    <div class="field-wrap output-wrap">
+      <textarea id="encodedOutput" class="large-box code-box" placeholder="Your protected code will appear here..." readonly aria-label="Protected code"></textarea>
+      <button class="corner-btn" type="button" data-copy="encodedOutput" title="Copy protected code">⧉ <span>Copy</span></button>
+    </div>
+  </section>
+</main>
+<footer><div class="container"><span class="green-dot"></span> Secure Message <span>•</span> Huffman coding + password protection</div></footer>
+<script src="app.js"></script>
+</body></html>
