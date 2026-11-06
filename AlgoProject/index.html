@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huffman Compression</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Huffman Compression</h1>
+        <p>Visualize Huffman coding step by step</p>
+    </header>
+
+    <main>
+        <!-- Input -->
+        <section class="card input-card">
+            <h2>Enter Your Message</h2>
+            <textarea id="message" placeholder="Type your message here..."></textarea>
+            <button id="compressButton">Compress Message</button>
+        </section>
+
+        <!-- Character Frequency -->
+        <section class="card">
+            <h2>Character Frequency</h2>
+            <div id="frequencyList" class="frequency-list">
+                <p class="empty">Enter a message and click Compress Message.</p>
+            </div>
+        </section>
+
+        <!-- Huffman Tree -->
+        <section class="card tree-card">
+            <h2>Huffman Tree</h2>
+            <div id="treeContainer" class="tree-container">
+                <p class="empty">Your Huffman tree will appear here.</p>
+            </div>
+        </section>
+
+        <!-- Huffman Codes -->
+        <section class="card">
+            <h2>Huffman Codes</h2>
+            <div id="codeList" class="code-list">
+                <p class="empty">Huffman codes will appear here.</p>
+            </div>
+        </section>
+
+        <!-- Compressed Result -->
+        <section class="card">
+            <h2>Compressed Code</h2>
+            <div id="compressedCode" class="compressed-code">
+                <p class="empty">The compressed binary code will appear here.</p>
+            </div>
+            <div id="stats" class="stats"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Huffman Compression Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
